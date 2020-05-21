@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7fR-6z-HdA">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SOLID-DB-->
+        <scene sceneID="192-yF-e2D">
+            <objects>
+                <tableViewController id="pvu-nB-rB4" customClass="DataTableViewController" customModule="SOLID_DB" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="poc-wF-LIl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="7pJ-K1-Nhw">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7pJ-K1-Nhw" id="0pM-mz-vgv">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="pvu-nB-rB4" id="XVA-jh-Ys5"/>
+                            <outlet property="delegate" destination="pvu-nB-rB4" id="NEm-9F-CXL"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="SOLID-DB" id="l6m-lh-xDr"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uSH-r7-VYI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1958" y="22"/>
+        </scene>
+        <!--Database Selector View Controller-->
+        <scene sceneID="ip0-Fr-yeq">
+            <objects>
+                <viewController id="rRY-5j-qUM" customClass="DatabaseSelectorViewController" customModule="SOLID_DB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Ac-4Y-oxj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OKN-sG-B1l">
+                                <rect key="frame" x="151" y="406" width="112" height="30"/>
+                                <state key="normal" title="Realm Database"/>
+                                <connections>
+                                    <action selector="onButton:" destination="rRY-5j-qUM" eventType="touchUpInside" id="9ca-Kf-VoO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQo-5O-8Tu">
+                                <rect key="frame" x="138" y="468" width="138" height="30"/>
+                                <state key="normal" title="Core Data Database"/>
+                                <connections>
+                                    <action selector="onButton:" destination="rRY-5j-qUM" eventType="touchUpInside" id="npb-Cn-hE4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BDY-L0-uDB">
+                                <rect key="frame" x="144.5" y="282" width="125" height="30"/>
+                                <state key="normal" title="Memory Database"/>
+                                <connections>
+                                    <action selector="onButton:" destination="rRY-5j-qUM" eventType="touchUpInside" id="5jV-Eq-7zJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8km-vK-FE7">
+                                <rect key="frame" x="129.5" y="344" width="155" height="30"/>
+                                <state key="normal" title="User Default Database"/>
+                                <connections>
+                                    <action selector="onButton:" destination="rRY-5j-qUM" eventType="touchUpInside" id="p2P-GA-RPN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="8km-vK-FE7" firstAttribute="top" secondItem="BDY-L0-uDB" secondAttribute="bottom" constant="32" id="21i-Ce-3UW"/>
+                            <constraint firstItem="OKN-sG-B1l" firstAttribute="centerX" secondItem="2Ac-4Y-oxj" secondAttribute="centerX" id="634-v6-29a"/>
+                            <constraint firstItem="RQo-5O-8Tu" firstAttribute="centerX" secondItem="OKN-sG-B1l" secondAttribute="centerX" id="MgE-9l-N4l"/>
+                            <constraint firstItem="OKN-sG-B1l" firstAttribute="centerY" secondItem="2Ac-4Y-oxj" secondAttribute="centerY" id="TFo-gA-BXd"/>
+                            <constraint firstItem="BDY-L0-uDB" firstAttribute="centerX" secondItem="8km-vK-FE7" secondAttribute="centerX" id="bM9-Fc-YXZ"/>
+                            <constraint firstItem="OKN-sG-B1l" firstAttribute="top" secondItem="8km-vK-FE7" secondAttribute="bottom" constant="32" id="c2F-hl-iGm"/>
+                            <constraint firstItem="8km-vK-FE7" firstAttribute="centerX" secondItem="OKN-sG-B1l" secondAttribute="centerX" id="kBM-5I-Fxw"/>
+                            <constraint firstItem="RQo-5O-8Tu" firstAttribute="top" secondItem="OKN-sG-B1l" secondAttribute="bottom" constant="32" id="vrl-xA-lXk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="P3U-YL-02q"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fgN-9c-3In"/>
+                    <connections>
+                        <outlet property="buttonGoToCoreDataDatabase" destination="RQo-5O-8Tu" id="inc-hW-gZV"/>
+                        <outlet property="buttonGoToDefaultDatabase" destination="8km-vK-FE7" id="w7g-mi-RfA"/>
+                        <outlet property="buttonGoToMemoryDatabase" destination="BDY-L0-uDB" id="p23-SK-8vb"/>
+                        <outlet property="buttonGoToRealmDatabase" destination="OKN-sG-B1l" id="sla-LG-02Z"/>
+                        <segue destination="pvu-nB-rB4" kind="show" identifier="idSegueToUserDefault" id="ZBt-26-D09"/>
+                        <segue destination="pvu-nB-rB4" kind="show" identifier="idSegueToRealm" id="vs1-Ky-XUz"/>
+                        <segue destination="pvu-nB-rB4" kind="show" identifier="idSegueToCoreData" id="dcf-tN-jHW"/>
+                        <segue destination="pvu-nB-rB4" kind="show" identifier="idSegueToMemory" id="IFa-Kp-GYs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0JG-YS-TAr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1020" y="133"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="t4f-L9-OMw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7fR-6z-HdA" customClass="NavigationController" customModule="SOLID_DB" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3Vq-lh-JTP">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rRY-5j-qUM" kind="show" identifier="idSegueToMain" id="Cap-Ys-dhl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P6X-Mg-sqJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="118.84057971014494" y="132.58928571428572"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="IFa-Kp-GYs"/>
+    </inferredMetricsTieBreakers>
+</document>
