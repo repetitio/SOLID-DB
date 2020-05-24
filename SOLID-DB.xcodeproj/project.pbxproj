@@ -13,21 +13,24 @@
 		8452C5E8247673090053B5FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8452C5E6247673090053B5FA /* LaunchScreen.storyboard */; };
 		8452C5F32476730A0053B5FA /* SOLID_DBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452C5F22476730A0053B5FA /* SOLID_DBTests.swift */; };
 		8452C5FE2476730A0053B5FA /* SOLID_DBUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452C5FD2476730A0053B5FA /* SOLID_DBUITests.swift */; };
-		8452C60C247673CF0053B5FA /* DataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452C60B247673CF0053B5FA /* DataTableViewController.swift */; };
-		8452C60D247673CF0053B5FA /* DataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452C60B247673CF0053B5FA /* DataTableViewController.swift */; };
-		8452C60E247673CF0053B5FA /* DataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452C60B247673CF0053B5FA /* DataTableViewController.swift */; };
+		8452C60C247673CF0053B5FA /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452C60B247673CF0053B5FA /* TableViewController.swift */; };
+		8452C60D247673CF0053B5FA /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452C60B247673CF0053B5FA /* TableViewController.swift */; };
+		8452C60E247673CF0053B5FA /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452C60B247673CF0053B5FA /* TableViewController.swift */; };
 		8452C6102476899B0053B5FA /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452C60F2476899B0053B5FA /* NavigationController.swift */; };
 		8452C6112476899B0053B5FA /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452C60F2476899B0053B5FA /* NavigationController.swift */; };
 		8452C6122476899B0053B5FA /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452C60F2476899B0053B5FA /* NavigationController.swift */; };
-		8452C614247691510053B5FA /* DatabaseSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452C613247691510053B5FA /* DatabaseSelectorViewController.swift */; };
-		8452C615247691510053B5FA /* DatabaseSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452C613247691510053B5FA /* DatabaseSelectorViewController.swift */; };
-		8452C616247691510053B5FA /* DatabaseSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452C613247691510053B5FA /* DatabaseSelectorViewController.swift */; };
+		8452C614247691510053B5FA /* SelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452C613247691510053B5FA /* SelectorViewController.swift */; };
+		8452C615247691510053B5FA /* SelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452C613247691510053B5FA /* SelectorViewController.swift */; };
+		8452C616247691510053B5FA /* SelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452C613247691510053B5FA /* SelectorViewController.swift */; };
 		8452C6182476AB140053B5FA /* DatabaseCRUDProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452C6172476AB140053B5FA /* DatabaseCRUDProtocol.swift */; };
 		8452C6192476AB140053B5FA /* DatabaseCRUDProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452C6172476AB140053B5FA /* DatabaseCRUDProtocol.swift */; };
 		8452C61A2476AB140053B5FA /* DatabaseCRUDProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452C6172476AB140053B5FA /* DatabaseCRUDProtocol.swift */; };
 		8452C61C2476AB680053B5FA /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452C61B2476AB680053B5FA /* DatabaseService.swift */; };
 		8452C61D2476AB680053B5FA /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452C61B2476AB680053B5FA /* DatabaseService.swift */; };
 		8452C61E2476AB680053B5FA /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452C61B2476AB680053B5FA /* DatabaseService.swift */; };
+		849EE244247AF60E00FF9B8B /* LaunchDatabasesStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849EE243247AF60E00FF9B8B /* LaunchDatabasesStructure.swift */; };
+		849EE245247AF60E00FF9B8B /* LaunchDatabasesStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849EE243247AF60E00FF9B8B /* LaunchDatabasesStructure.swift */; };
+		849EE246247AF60E00FF9B8B /* LaunchDatabasesStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849EE243247AF60E00FF9B8B /* LaunchDatabasesStructure.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,11 +63,12 @@
 		8452C5F92476730A0053B5FA /* SOLID-DBUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SOLID-DBUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8452C5FD2476730A0053B5FA /* SOLID_DBUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOLID_DBUITests.swift; sourceTree = "<group>"; };
 		8452C5FF2476730A0053B5FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8452C60B247673CF0053B5FA /* DataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTableViewController.swift; sourceTree = "<group>"; };
+		8452C60B247673CF0053B5FA /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		8452C60F2476899B0053B5FA /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
-		8452C613247691510053B5FA /* DatabaseSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseSelectorViewController.swift; sourceTree = "<group>"; };
+		8452C613247691510053B5FA /* SelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorViewController.swift; sourceTree = "<group>"; };
 		8452C6172476AB140053B5FA /* DatabaseCRUDProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseCRUDProtocol.swift; sourceTree = "<group>"; };
 		8452C61B2476AB680053B5FA /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
+		849EE243247AF60E00FF9B8B /* LaunchDatabasesStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDatabasesStructure.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,10 +121,11 @@
 			children = (
 				8452C5DB247673070053B5FA /* AppDelegate.swift */,
 				8452C60F2476899B0053B5FA /* NavigationController.swift */,
-				8452C613247691510053B5FA /* DatabaseSelectorViewController.swift */,
+				8452C613247691510053B5FA /* SelectorViewController.swift */,
+				8452C60B247673CF0053B5FA /* TableViewController.swift */,
 				8452C61B2476AB680053B5FA /* DatabaseService.swift */,
 				8452C6172476AB140053B5FA /* DatabaseCRUDProtocol.swift */,
-				8452C60B247673CF0053B5FA /* DataTableViewController.swift */,
+				849EE243247AF60E00FF9B8B /* LaunchDatabasesStructure.swift */,
 				8452C5E4247673090053B5FA /* Assets.xcassets */,
 				8452C5E1247673070053B5FA /* Main.storyboard */,
 				8452C5E6247673090053B5FA /* LaunchScreen.storyboard */,
@@ -279,11 +284,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8452C61C2476AB680053B5FA /* DatabaseService.swift in Sources */,
-				8452C614247691510053B5FA /* DatabaseSelectorViewController.swift in Sources */,
+				8452C614247691510053B5FA /* SelectorViewController.swift in Sources */,
 				8452C5DC247673070053B5FA /* AppDelegate.swift in Sources */,
 				8452C6102476899B0053B5FA /* NavigationController.swift in Sources */,
+				849EE244247AF60E00FF9B8B /* LaunchDatabasesStructure.swift in Sources */,
 				8452C6182476AB140053B5FA /* DatabaseCRUDProtocol.swift in Sources */,
-				8452C60C247673CF0053B5FA /* DataTableViewController.swift in Sources */,
+				8452C60C247673CF0053B5FA /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,11 +298,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8452C61D2476AB680053B5FA /* DatabaseService.swift in Sources */,
-				8452C615247691510053B5FA /* DatabaseSelectorViewController.swift in Sources */,
+				8452C615247691510053B5FA /* SelectorViewController.swift in Sources */,
 				8452C5F32476730A0053B5FA /* SOLID_DBTests.swift in Sources */,
 				8452C6112476899B0053B5FA /* NavigationController.swift in Sources */,
+				849EE245247AF60E00FF9B8B /* LaunchDatabasesStructure.swift in Sources */,
 				8452C6192476AB140053B5FA /* DatabaseCRUDProtocol.swift in Sources */,
-				8452C60D247673CF0053B5FA /* DataTableViewController.swift in Sources */,
+				8452C60D247673CF0053B5FA /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,11 +312,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8452C61E2476AB680053B5FA /* DatabaseService.swift in Sources */,
-				8452C616247691510053B5FA /* DatabaseSelectorViewController.swift in Sources */,
+				8452C616247691510053B5FA /* SelectorViewController.swift in Sources */,
 				8452C5FE2476730A0053B5FA /* SOLID_DBUITests.swift in Sources */,
 				8452C6122476899B0053B5FA /* NavigationController.swift in Sources */,
+				849EE246247AF60E00FF9B8B /* LaunchDatabasesStructure.swift in Sources */,
 				8452C61A2476AB140053B5FA /* DatabaseCRUDProtocol.swift in Sources */,
-				8452C60E247673CF0053B5FA /* DataTableViewController.swift in Sources */,
+				8452C60E247673CF0053B5FA /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

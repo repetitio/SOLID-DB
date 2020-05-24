@@ -8,10 +8,6 @@
 
 import Foundation
 
-enum DatabaseType {
-    case userDefaut, realm, coreData
-}
-
 class DatabaseService: DatabaseCRUDProtocol {
 }
 

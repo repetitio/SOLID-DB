@@ -43,6 +43,10 @@ class SOLID_DBUITests: XCTestCase {
         XCTAssert(app.launchArguments.contains("-realm"))
         XCTAssert(app.launchArguments.contains("-coreData"))
         
+        XCTAssert(app.buttons["idSelectorButtonMemory"].isEnabled)
+        XCTAssert(app.buttons["idSelectorButtonUserDefault"].isEnabled)
+        XCTAssert(app.buttons["idSelectorButtonRealm"].isEnabled)
+        XCTAssert(app.buttons["idSelectorButtonCoreData"].isEnabled)
     }
     
     func testLaunchNoneDatabases() throws {
@@ -53,6 +57,11 @@ class SOLID_DBUITests: XCTestCase {
         XCTAssert(!app.launchArguments.contains("-userDefault"))
         XCTAssert(!app.launchArguments.contains("-realm"))
         XCTAssert(!app.launchArguments.contains("-coreData"))
+
+        XCTAssert(!app.buttons["idSelectorButtonMemory"].isEnabled)
+        XCTAssert(!app.buttons["idSelectorButtonUserDefault"].isEnabled)
+        XCTAssert(!app.buttons["idSelectorButtonRealm"].isEnabled)
+        XCTAssert(!app.buttons["idSelectorButtonCoreData"].isEnabled)
     }
     
     func testLaunchPerformance() throws {

@@ -10,24 +10,25 @@ import UIKit
 
 class NavigationController: UINavigationController {
     
+    var launchDatabasesStructure :LaunchDatabasesStructure! = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        performSegue(withIdentifier: "idSegueToMain", sender: self)
     }
     
-    
+    func configureWithLaunchOptionsDatabases(_ launchDatabasesStructure:LaunchDatabasesStructure) {
+        self.launchDatabasesStructure = launchDatabasesStructure
+        performSegue(withIdentifier: "idSegueToSelectorVC", sender: self)
+    }
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         // App configuration, main dependency injection
         switch segue.identifier {
-        case "idSegueToMain":
-            if let selectorVC = segue.destination as? DatabaseSelectorViewController {
-                selectorVC.isEnabledMemory          = false
-                selectorVC.isEnabledUserDefault     = false
-                selectorVC.isEnabledRealm           = false
-                selectorVC.isEnabledCoreData        = false
+        case "idSegueToSelectorVC":
+            if let selectorViewController = segue.destination as? SelectorViewController {
+                selectorViewController.dependencyInjection(launchDatabasesStructure)
             }
         default:
             break

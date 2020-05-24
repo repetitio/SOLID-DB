@@ -57,20 +57,20 @@ class SelectorViewController: UIViewController {
         
         switch segue.identifier {
         case "idSegueToMemory":
-            if let dataTableViewController = segue.destination as? DataTableViewController {
-                dataTableViewController.dependencyInjection(.memory)
+            if let tableViewController = segue.destination as? TableViewController {
+                tableViewController.dependencyInjection(.memory)
             }
         case "idSegueToUserDefault":
-            if let dataTableViewController = segue.destination as? DataTableViewController {
-                dataTableViewController.dependencyInjection(.userDefault)
+            if let tableViewController = segue.destination as? TableViewController {
+                tableViewController.dependencyInjection(.userDefault)
             }
         case "idSegueToRealm":
-            if let dataTableViewController = segue.destination as? DataTableViewController {
-                dataTableViewController.dependencyInjection(.realm)
+            if let tableViewController = segue.destination as? TableViewController {
+                tableViewController.dependencyInjection(.realm)
             }
         case "idSegueToCoreData":
-            if let dataTableViewController = segue.destination as? DataTableViewController {
-                dataTableViewController.dependencyInjection(.coreData)
+            if let tableViewController = segue.destination as? TableViewController {
+                tableViewController.dependencyInjection(.coreData)
             }
         default:
             break
