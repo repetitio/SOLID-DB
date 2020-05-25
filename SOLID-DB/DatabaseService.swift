@@ -10,5 +10,3 @@ import Foundation
 
 class DatabaseService: DatabaseCRUDProtocol {
 }
-
-

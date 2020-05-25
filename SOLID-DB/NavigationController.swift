@@ -9,21 +9,21 @@
 import UIKit
 
 class NavigationController: UINavigationController {
-    
-    var launchDatabasesStructure :LaunchDatabasesStructure! = nil
-    
+
+    var launchDatabasesStructure: LaunchDatabasesStructure! = nil
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    func configureWithLaunchOptionsDatabases(_ launchDatabasesStructure:LaunchDatabasesStructure) {
+
+    func configureWithLaunchOptionsDatabases(_ launchDatabasesStructure: LaunchDatabasesStructure) {
         self.launchDatabasesStructure = launchDatabasesStructure
         performSegue(withIdentifier: "idSegueToSelectorVC", sender: self)
     }
-    
+
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+
         // App configuration, main dependency injection
         switch segue.identifier {
         case "idSegueToSelectorVC":
@@ -34,5 +34,5 @@ class NavigationController: UINavigationController {
             break
         }
     }
-    
+
 }

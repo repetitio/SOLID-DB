@@ -16,8 +16,8 @@ enum LaunchDatabaseParameter: String {
 }
 
 struct LaunchDatabasesStructure {
-    let memory      : Bool
-    let userDefault : Bool
-    let realm       : Bool
-    let coreData    : Bool
+    let memory: Bool
+    let userDefault: Bool
+    let realm: Bool
+    let coreData: Bool
 }

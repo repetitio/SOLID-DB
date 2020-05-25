@@ -9,11 +9,11 @@
 import UIKit
 
 class TableViewController: UITableViewController {
-    
-    var launchParameter:LaunchDatabaseParameter! = nil
-    var databaseService:DatabaseCRUDProtocol! = nil
-    
-    func dependencyInjection(_ launchParameter:LaunchDatabaseParameter) {
+
+    var launchParameter: LaunchDatabaseParameter! = nil
+    var databaseService: DatabaseCRUDProtocol! = nil
+
+    func dependencyInjection(_ launchParameter: LaunchDatabaseParameter) {
         self.launchParameter = launchParameter
     }
 
@@ -21,17 +21,17 @@ class TableViewController: UITableViewController {
         super.viewDidLoad()
         configureUI()
     }
-    
+
     private func configureUI() {
         title = launchParameter.rawValue
     }
-    
+
     // MARK: - Table view data source
-    
+
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 0
     }
-    
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 0
     }

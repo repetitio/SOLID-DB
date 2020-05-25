@@ -9,34 +9,34 @@
 import UIKit
 
 class SelectorViewController: UIViewController {
-    
+
     // Forced dependency injection:
-    var launchDatabasesStructure :LaunchDatabasesStructure! = nil
-    
+    var launchDatabasesStructure: LaunchDatabasesStructure! = nil
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI(launchDatabasesStructure)
     }
-    
-    func dependencyInjection(_ launchDatabasesStructure:LaunchDatabasesStructure) {
+
+    func dependencyInjection(_ launchDatabasesStructure: LaunchDatabasesStructure) {
         self.launchDatabasesStructure = launchDatabasesStructure
     }
-    
-    private func configureUI(_ launchDatabasesStructure:LaunchDatabasesStructure) {
+
+    private func configureUI(_ launchDatabasesStructure: LaunchDatabasesStructure) {
         buttonGoToMemoryDatabase    .isEnabled = launchDatabasesStructure.memory
         buttonGoToDefaultDatabase   .isEnabled = launchDatabasesStructure.userDefault
         buttonGoToRealmDatabase     .isEnabled = launchDatabasesStructure.realm
         buttonGoToCoreDataDatabase  .isEnabled = launchDatabasesStructure.coreData
     }
-    
-    @IBOutlet weak var buttonGoToMemoryDatabase :UIButton!
-    @IBOutlet weak var buttonGoToDefaultDatabase:UIButton!
-    @IBOutlet weak var buttonGoToRealmDatabase  :UIButton!
-    @IBOutlet weak var buttonGoToCoreDataDatabase:UIButton!
-    
+
+    @IBOutlet weak var buttonGoToMemoryDatabase: UIButton!
+    @IBOutlet weak var buttonGoToDefaultDatabase: UIButton!
+    @IBOutlet weak var buttonGoToRealmDatabase: UIButton!
+    @IBOutlet weak var buttonGoToCoreDataDatabase: UIButton!
+
     @IBAction func onButton(_ sender: UIButton) {
-        let segueIdentifier:String
-        
+        let segueIdentifier: String
+
         switch sender.tag {
         case 1:
             segueIdentifier = "idSegueToUserDefault"
@@ -51,10 +51,10 @@ class SelectorViewController: UIViewController {
         }
         performSegue(withIdentifier: segueIdentifier, sender: self)
     }
-    
+
     // Configure Database Controller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+
         switch segue.identifier {
         case "idSegueToMemory":
             if let tableViewController = segue.destination as? TableViewController {
@@ -76,5 +76,5 @@ class SelectorViewController: UIViewController {
             break
         }
     }
-    
+
 }
