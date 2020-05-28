@@ -31,7 +31,17 @@
                             <outlet property="delegate" destination="pvu-nB-rB4" id="NEm-9F-CXL"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="SOLID-DB" id="l6m-lh-xDr"/>
+                    <navigationItem key="navigationItem" title="SOLID-DB" id="l6m-lh-xDr">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="lqd-BE-qtB">
+                            <connections>
+                                <action selector="onButtonPlus:" destination="pvu-nB-rB4" id="a8w-ex-LnB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outletCollection property="buttonPlus" destination="l6m-lh-xDr" collectionClass="NSMutableArray" id="Khu-HF-0ON"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uSH-r7-VYI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

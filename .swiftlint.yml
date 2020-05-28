@@ -1,5 +1,4 @@
 disabled_rules: # rule identifiers to exclude from running
-  - type_name
   - missing_docs
   - valid_docs
   - todo
@@ -34,6 +33,7 @@ file_length:
 # naming rules can set warnings/errors for min_length and max_length
 # additionally they can set excluded names
 type_name:
+  allowed_symbols: "_ -"
   min_length: 2 # only warning
   max_length: # warning and error
     warning: 40

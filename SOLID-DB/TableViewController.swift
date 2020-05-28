@@ -10,6 +10,12 @@ import UIKit
 
 class TableViewController: UITableViewController {
 
+    @IBOutlet var buttonPlus: [UINavigationItem]!
+
+    @IBAction func onButtonPlus(_ sender: UIBarButtonItem) {
+        addNewRecord()
+    }
+
     var launchParameter: LaunchDatabaseParameter! = nil
     var databaseService: DatabaseCRUDProtocol! = nil
 
@@ -35,4 +41,9 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 0
     }
+
+    private func addNewRecord() {
+        print("✏️ Add New Record...")
+    }
+
 }
