@@ -205,9 +205,9 @@
 			children = (
 				847AB06224803CB3008BC76E /* DatabaseMemory.swift */,
 				8452C61B2476AB680053B5FA /* DatabaseCreator.swift */,
-				8452C6172476AB140053B5FA /* DatabaseServiceCRUDProtocol.swift */,
 				84EF4C0824802EEB004AE181 /* DataViewModel.swift */,
 				849EE243247AF60E00FF9B8B /* LaunchDatabasesStructure.swift */,
+				8452C6172476AB140053B5FA /* DatabaseServiceCRUDProtocol.swift */,
 			);
 			path = "Database Services";
 			sourceTree = "<group>";

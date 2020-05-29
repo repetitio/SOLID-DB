@@ -37,13 +37,21 @@ class SOLID_DBTests: XCTestCase {
         // This is an example of a performance test case.
         self.measure {
             let databaseMemory = DatabaseCreator.databaseCRUD(launchDatabaseParameter: .memory)
-            let maxN = 1000000
+
+            let maxN = 10_000
+
             for index in 1...maxN {
                 let text = "Record:'\(index)'"
                 let dataViewModel = DataViewModel(text: text)
                 databaseMemory.create(dataViewModel: dataViewModel)
             }
             XCTAssert(databaseMemory.count() == maxN)
+
+            for _ in 1...maxN {
+                let dataViewModel: DataViewModel = databaseMemory.getElement(index: 0)
+                databaseMemory.remove(dataViewModel: dataViewModel)
+            }
+            XCTAssert(databaseMemory.count() == 0)
 
         }
     }

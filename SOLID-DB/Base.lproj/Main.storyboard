@@ -48,7 +48,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="SOLID-DB" id="l6m-lh-xDr">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="lqd-BE-qtB">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="lqd-BE-qtB" userLabel="Add Record Plus Button">
                             <connections>
                                 <action selector="onButtonPlus:" destination="pvu-nB-rB4" id="a8w-ex-LnB"/>
                             </connections>

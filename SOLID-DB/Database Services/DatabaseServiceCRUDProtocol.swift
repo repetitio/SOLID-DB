@@ -13,9 +13,9 @@ protocol DatabaseServiceCRUDProtocol {
     func remove(dataViewModel: DataViewModel)
     func removeAll()
 
-    //helpers:
+    //access:
+    func getElement(index: Int) -> DataViewModel
     func addDelegate(_ ctrl: CRUD_CallbackProtocol)
     func count() -> Int
-    func getElement(index: Int) -> DataViewModel
     func title() -> String
 }
