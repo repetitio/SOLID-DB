@@ -55,24 +55,23 @@ class SelectorViewController: UIViewController {
     // Configure Database Controller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
+        guard let tableViewController = segue.destination as? TableViewController else {
+            return
+        }
+
         switch segue.identifier {
         case "idSegueToMemory":
-            if let tableViewController = segue.destination as? TableViewController {
-                tableViewController.dependencyInjection(.memory)
-            }
+//            tableViewController.configureTableView(configureTableView)
+            tableViewController.configureTableView(databaseService: DatabaseCreator.databaseCRUD(launchDatabaseParameter: .memory))
         case "idSegueToUserDefault":
-            if let tableViewController = segue.destination as? TableViewController {
-                tableViewController.dependencyInjection(.userDefault)
-            }
+            tableViewController.configureTableView(databaseService: DatabaseCreator.databaseCRUD(launchDatabaseParameter: .userDefault))
         case "idSegueToRealm":
-            if let tableViewController = segue.destination as? TableViewController {
-                tableViewController.dependencyInjection(.realm)
-            }
+            tableViewController.configureTableView(databaseService: DatabaseCreator.databaseCRUD(launchDatabaseParameter: .realm))
         case "idSegueToCoreData":
-            if let tableViewController = segue.destination as? TableViewController {
-                tableViewController.dependencyInjection(.coreData)
-            }
-        default:
+            tableViewController.configureTableView(databaseService: DatabaseCreator.databaseCRUD(launchDatabaseParameter: .coreData))
+        case .none:
+            break
+        case .some:
             break
         }
     }
