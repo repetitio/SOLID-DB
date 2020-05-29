@@ -28,6 +28,9 @@
 		8452C61C2476AB680053B5FA /* DatabaseCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452C61B2476AB680053B5FA /* DatabaseCreator.swift */; };
 		8452C61D2476AB680053B5FA /* DatabaseCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452C61B2476AB680053B5FA /* DatabaseCreator.swift */; };
 		8452C61E2476AB680053B5FA /* DatabaseCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452C61B2476AB680053B5FA /* DatabaseCreator.swift */; };
+		8479F91924813EC600895C5D /* DatabaseUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479F91824813EC600895C5D /* DatabaseUserDefaults.swift */; };
+		8479F91A24813EC600895C5D /* DatabaseUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479F91824813EC600895C5D /* DatabaseUserDefaults.swift */; };
+		8479F91B24813EC600895C5D /* DatabaseUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479F91824813EC600895C5D /* DatabaseUserDefaults.swift */; };
 		847AB06324803CB3008BC76E /* DatabaseMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847AB06224803CB3008BC76E /* DatabaseMemory.swift */; };
 		847AB06424803CB3008BC76E /* DatabaseMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847AB06224803CB3008BC76E /* DatabaseMemory.swift */; };
 		847AB06524803CB3008BC76E /* DatabaseMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847AB06224803CB3008BC76E /* DatabaseMemory.swift */; };
@@ -82,6 +85,7 @@
 		8452C613247691510053B5FA /* SelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorViewController.swift; sourceTree = "<group>"; };
 		8452C6172476AB140053B5FA /* DatabaseServiceCRUDProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseServiceCRUDProtocol.swift; sourceTree = "<group>"; };
 		8452C61B2476AB680053B5FA /* DatabaseCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseCreator.swift; sourceTree = "<group>"; };
+		8479F91824813EC600895C5D /* DatabaseUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseUserDefaults.swift; sourceTree = "<group>"; };
 		847AB06224803CB3008BC76E /* DatabaseMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseMemory.swift; sourceTree = "<group>"; };
 		84984665247BE8F3004B0999 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		84984666247BE8F3004B0999 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -190,6 +194,15 @@
 			path = "SOLID-DBUITests";
 			sourceTree = "<group>";
 		};
+		8479F91C24813ECD00895C5D /* CRUD Databases */ = {
+			isa = PBXGroup;
+			children = (
+				847AB06224803CB3008BC76E /* DatabaseMemory.swift */,
+				8479F91824813EC600895C5D /* DatabaseUserDefaults.swift */,
+			);
+			path = "CRUD Databases";
+			sourceTree = "<group>";
+		};
 		848972BC248109EC0090C248 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,7 +216,7 @@
 		84A8F1F224810AFB00C98486 /* Database Services */ = {
 			isa = PBXGroup;
 			children = (
-				847AB06224803CB3008BC76E /* DatabaseMemory.swift */,
+				8479F91C24813ECD00895C5D /* CRUD Databases */,
 				8452C61B2476AB680053B5FA /* DatabaseCreator.swift */,
 				84EF4C0824802EEB004AE181 /* DataViewModel.swift */,
 				849EE243247AF60E00FF9B8B /* LaunchDatabasesStructure.swift */,
@@ -480,6 +493,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8452C61C2476AB680053B5FA /* DatabaseCreator.swift in Sources */,
+				8479F91924813EC600895C5D /* DatabaseUserDefaults.swift in Sources */,
 				8452C614247691510053B5FA /* SelectorViewController.swift in Sources */,
 				847AB06324803CB3008BC76E /* DatabaseMemory.swift in Sources */,
 				8452C5DC247673070053B5FA /* AppDelegate.swift in Sources */,
@@ -496,6 +510,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8452C61D2476AB680053B5FA /* DatabaseCreator.swift in Sources */,
+				8479F91A24813EC600895C5D /* DatabaseUserDefaults.swift in Sources */,
 				8452C615247691510053B5FA /* SelectorViewController.swift in Sources */,
 				847AB06424803CB3008BC76E /* DatabaseMemory.swift in Sources */,
 				8452C5F32476730A0053B5FA /* SOLID_DBTests.swift in Sources */,
@@ -512,6 +527,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8452C61E2476AB680053B5FA /* DatabaseCreator.swift in Sources */,
+				8479F91B24813EC600895C5D /* DatabaseUserDefaults.swift in Sources */,
 				8452C616247691510053B5FA /* SelectorViewController.swift in Sources */,
 				847AB06524803CB3008BC76E /* DatabaseMemory.swift in Sources */,
 				8452C5FE2476730A0053B5FA /* SOLID_DBUITests.swift in Sources */,

@@ -25,30 +25,38 @@ struct DataViewModel {
         self.date = Date()
     }
 
+    init(text: String, uuid: UUID, date: Date) {
+        self.text = text
+        self.uuid = uuid
+        self.date = date
+    }
+
     init(dataMemoryModel: DataMemoryModel) {
         self.init(text: dataMemoryModel.text)
     }
 
     init(dataUserDefaultModel: DataUserDefaultModel) {
-        self.init(text: dataUserDefaultModel.text, uuid: dataUserDefaultModel.uuid)
+        self.init(text: dataUserDefaultModel.text, uuid: dataUserDefaultModel.uuid, date: dataUserDefaultModel.date)
     }
 }
 
 struct DataMemoryModel {
     let text: String
 
-    init(viewModel: DataViewModel) {
-        self.text = viewModel.text
+    init(dataViewModel: DataViewModel) {
+        self.text = dataViewModel.text
     }
 }
 
 struct DataUserDefaultModel {
     let text: String
     let uuid: UUID
+    let date: Date
 
-    init(viewModel: DataViewModel) {
-        self.text = viewModel.text
-        self.uuid = viewModel.uuid
+    init(dataViewModel: DataViewModel) {
+        self.text = dataViewModel.text
+        self.uuid = dataViewModel.uuid
+        self.date = dataViewModel.date
     }
 
 }

@@ -19,6 +19,36 @@ class SOLID_DBTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
+    func testDataStructuresConversion() throws {
+
+        let text = "Test text..."
+        let uuid = UUID()
+        let date = Date()
+
+        let dataViewModel = DataViewModel(text: text, uuid: uuid, date: date)
+        XCTAssert(dataViewModel.text == text)
+        XCTAssert(dataViewModel.uuid == uuid)
+        XCTAssert(dataViewModel.date == date)
+
+        let dataMemoryModel = DataMemoryModel(dataViewModel: dataViewModel)
+        XCTAssert(dataMemoryModel.text == text)
+
+        let dataViewModelFromMemoryModel = DataViewModel(dataMemoryModel: dataMemoryModel)
+        XCTAssert(dataViewModelFromMemoryModel.text == text)
+        XCTAssert(dataViewModelFromMemoryModel.uuid != uuid)
+        XCTAssert(dataViewModelFromMemoryModel.date != date)
+
+        let dataUserDefaultModel = DataUserDefaultModel(dataViewModel: dataViewModel)
+        XCTAssert(dataUserDefaultModel.text == text)
+        XCTAssert(dataUserDefaultModel.uuid == uuid)
+        XCTAssert(dataUserDefaultModel.date == date)
+
+        let dataViewModelFromUserDefaultModel = DataViewModel(dataUserDefaultModel: dataUserDefaultModel)
+        XCTAssert(dataViewModelFromUserDefaultModel.text == text)
+        XCTAssert(dataViewModelFromUserDefaultModel.uuid == uuid)
+        XCTAssert(dataViewModelFromUserDefaultModel.date == date)
+    }
+
     func testMemoryDatabase() throws {
 
         let databaseMemory = DatabaseCreator.databaseCRUD(launchDatabaseParameter: .memory)

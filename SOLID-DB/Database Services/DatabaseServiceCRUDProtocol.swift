@@ -15,7 +15,8 @@ protocol DatabaseServiceCRUDProtocol {
 
     //access:
     func getElement(index: Int) -> DataViewModel
-    func addDelegate(_ ctrl: CRUD_CallbackProtocol)
+    func addDelegate(_ ctrl: DatabaseTableviewProtocol)
     func count() -> Int
     func title() -> String
+    func synchronize()
 }

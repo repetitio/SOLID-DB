@@ -8,32 +8,28 @@
 
 import Foundation
 
-protocol CRUD_CallbackProtocol: class {
-    func refresh()
-}
-
 class DatabaseMemory: DatabaseServiceCRUDProtocol {
 
     func title() -> String {
         return "Memory Database"
     }
 
-    weak var delegate: CRUD_CallbackProtocol?
+    weak var delegate: DatabaseTableviewProtocol?
 
     var data = [DataMemoryModel]()
 
-    func addDelegate(_ ctrl: CRUD_CallbackProtocol) {
+    func addDelegate(_ ctrl: DatabaseTableviewProtocol) {
         delegate = ctrl
     }
 
     func create(dataViewModel: DataViewModel) {
-        let dataMemoryModel = DataMemoryModel(viewModel: dataViewModel)
+        let dataMemoryModel = DataMemoryModel(dataViewModel: dataViewModel)
         data.append(dataMemoryModel)
         delegate?.refresh()
     }
 
     func remove(dataViewModel: DataViewModel) {
-        let dataMemoryModel = DataMemoryModel(viewModel: dataViewModel)
+        let dataMemoryModel = DataMemoryModel(dataViewModel: dataViewModel)
         if let index = data.firstIndex(where: {$0.text == dataMemoryModel.text}) {
             data.remove(at: index)
         }
@@ -52,5 +48,9 @@ class DatabaseMemory: DatabaseServiceCRUDProtocol {
     func getElement(index: Int) -> DataViewModel {
         let dataViewModel = DataViewModel(dataMemoryModel: data[index])
         return dataViewModel
+    }
+
+    func synchronize() {
+        return
     }
 }

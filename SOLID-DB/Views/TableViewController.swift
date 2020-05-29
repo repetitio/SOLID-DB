@@ -8,7 +8,11 @@
 
 import UIKit
 
-class TableViewController: UITableViewController, CRUD_CallbackProtocol {
+protocol DatabaseTableviewProtocol: class {
+    func refresh()
+}
+
+class TableViewController: UITableViewController, DatabaseTableviewProtocol {
 
     var databaseService: DatabaseServiceCRUDProtocol! = nil
 
