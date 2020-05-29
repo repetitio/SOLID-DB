@@ -19,15 +19,32 @@ class SOLID_DBTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testMemoryDatabase() throws {
+
+        let databaseMemory = DatabaseCreator.databaseCRUD(launchDatabaseParameter: .memory)
+        XCTAssert(databaseMemory.count() == 0)
+        let text = "Some text"
+        let dataViewModel = DataViewModel(text: text)
+        databaseMemory.create(dataViewModel: dataViewModel)
+        databaseMemory.create(dataViewModel: dataViewModel)
+        databaseMemory.create(dataViewModel: dataViewModel)
+        XCTAssert(databaseMemory.count() == 3)
+        databaseMemory.removeAll()
+        XCTAssert(databaseMemory.count() == 0)
     }
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
         self.measure {
-            // Put the code you want to measure the time of here.
+            let databaseMemory = DatabaseCreator.databaseCRUD(launchDatabaseParameter: .memory)
+            let maxN = 1000000
+            for index in 1...maxN {
+                let text = "Record:'\(index)'"
+                let dataViewModel = DataViewModel(text: text)
+                databaseMemory.create(dataViewModel: dataViewModel)
+            }
+            XCTAssert(databaseMemory.count() == maxN)
+
         }
     }
 

@@ -9,9 +9,13 @@
 import Foundation
 
 protocol DatabaseServiceCRUDProtocol {
+    func create(dataViewModel: DataViewModel)
+    func remove(dataViewModel: DataViewModel)
+    func removeAll()
+
+    //helpers:
     func addDelegate(_ ctrl: CRUD_CallbackProtocol)
-    func create(element: DatabaseViewModel)
     func count() -> Int
-    func getElement(index: Int) -> DatabaseViewModel
+    func getElement(index: Int) -> DataViewModel
     func title() -> String
 }

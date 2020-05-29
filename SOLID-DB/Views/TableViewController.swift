@@ -44,8 +44,8 @@ class TableViewController: UITableViewController, CRUD_CallbackProtocol {
 
     private func addNewRecord() {
         print("✏️ Add New Record...")
-        let element = DatabaseViewModel(text: "✏️ Add New Record...")
-        databaseService.create(element: element)
+        let dataViewModel = DataViewModel(text: "✏️ Add New Record...")
+        databaseService.create(dataViewModel: dataViewModel)
     }
 
     func refresh() {
@@ -57,7 +57,7 @@ class TableViewController: UITableViewController, CRUD_CallbackProtocol {
 
         let element = databaseService.getElement(index: indexPath.row)
         cell.textLabel?.text = element.text
-        cell.detailTextLabel?.text = "\(indexPath.row)"
+        cell.detailTextLabel?.text = element.uuid.description
 
         return cell
     }
