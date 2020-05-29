@@ -52,6 +52,7 @@ class SOLID_DBTests: XCTestCase {
     func testMemoryDatabase() throws {
 
         let databaseMemory = DatabaseCreator.databaseCRUD(launchDatabaseParameter: .memory)
+        databaseMemory.removeAll()
         XCTAssert(databaseMemory.count() == 0)
         let text = "Some text"
         let dataViewModel = DataViewModel(text: text)
@@ -63,10 +64,25 @@ class SOLID_DBTests: XCTestCase {
         XCTAssert(databaseMemory.count() == 0)
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
+    func testUserDefaultDatabase() throws {
+
+        let databaseMemory = DatabaseCreator.databaseCRUD(launchDatabaseParameter: .userDefault)
+        databaseMemory.removeAll()
+        XCTAssert(databaseMemory.count() == 0)
+        let text = "Some text"
+        let dataViewModel = DataViewModel(text: text)
+        databaseMemory.create(dataViewModel: dataViewModel)
+        databaseMemory.create(dataViewModel: dataViewModel)
+        databaseMemory.create(dataViewModel: dataViewModel)
+        XCTAssert(databaseMemory.count() == 3)
+        databaseMemory.removeAll()
+        XCTAssert(databaseMemory.count() == 0)
+    }
+
+    func testPerformanceMemoryDatabase() throws {
         self.measure {
             let databaseMemory = DatabaseCreator.databaseCRUD(launchDatabaseParameter: .memory)
+            databaseMemory.removeAll()
 
             let maxN = 10_000
 
@@ -82,7 +98,28 @@ class SOLID_DBTests: XCTestCase {
                 databaseMemory.remove(dataViewModel: dataViewModel)
             }
             XCTAssert(databaseMemory.count() == 0)
+        }
+    }
 
+    func testPerformanceUserDefaultDatabase() throws {
+        self.measure {
+            let databaseMemory = DatabaseCreator.databaseCRUD(launchDatabaseParameter: .userDefault)
+            databaseMemory.removeAll()
+
+            let maxN = 10
+
+            for index in 1...maxN {
+                let text = "Record:'\(index)'"
+                let dataViewModel = DataViewModel(text: text)
+                databaseMemory.create(dataViewModel: dataViewModel)
+            }
+            XCTAssert(databaseMemory.count() == maxN)
+
+            for _ in 1...maxN {
+                let dataViewModel: DataViewModel = databaseMemory.getElement(index: 0)
+                databaseMemory.remove(dataViewModel: dataViewModel)
+            }
+            XCTAssert(databaseMemory.count() == 0)
         }
     }
 

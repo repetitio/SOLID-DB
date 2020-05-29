@@ -20,6 +20,11 @@ class TableViewController: UITableViewController, DatabaseTableviewProtocol {
     @IBAction func onButtonPlus(_ sender: UIBarButtonItem) {
         addNewRecord()
     }
+    @IBOutlet weak var buttonRecycleBin: UIBarButtonItem!
+
+    @IBAction func onButtonRecycleBin(_ sender: UIBarButtonItem) {
+        removeAll()
+    }
 
     func configureTableView(databaseService: DatabaseServiceCRUDProtocol) {
         self.databaseService = databaseService
@@ -50,6 +55,14 @@ class TableViewController: UITableViewController, DatabaseTableviewProtocol {
         print("✏️ Add New Record...")
         let dataViewModel = DataViewModel(text: "✏️ Add New Record...")
         databaseService.create(dataViewModel: dataViewModel)
+    }
+
+    private func removeAll() {
+        databaseService.removeAll()
+    }
+
+    deinit {
+        databaseService.synchronize()
     }
 
     func refresh() {

@@ -15,8 +15,6 @@ class DatabaseUserDefaults: DatabaseServiceCRUDProtocol {
     }
 
     weak var delegate: DatabaseTableviewProtocol?
-
-//    var data: Dictionary<String, Any>.Keys
     var data: [String]
 
     init() {
@@ -39,6 +37,7 @@ class DatabaseUserDefaults: DatabaseServiceCRUDProtocol {
         let key =  dataViewModel.uuid.description
         UserDefaults.standard.set(dataUserDefaultModel.text, forKey: key)
         UserDefaults.standard.set(dataUserDefaultModel.date, forKey: keyForDate(key: key))
+        data.append(key)
         delegate?.refresh()
     }
 

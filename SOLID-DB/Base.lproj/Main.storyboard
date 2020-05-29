@@ -48,14 +48,22 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="SOLID-DB" id="l6m-lh-xDr">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="lqd-BE-qtB" userLabel="Add Record Plus Button">
-                            <connections>
-                                <action selector="onButtonPlus:" destination="pvu-nB-rB4" id="a8w-ex-LnB"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="lqd-BE-qtB" userLabel="Add Record Plus Button">
+                                <connections>
+                                    <action selector="onButtonPlus:" destination="pvu-nB-rB4" id="a8w-ex-LnB"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="trash" id="7W5-Xm-QCw">
+                                <connections>
+                                    <action selector="onButtonRecycleBin:" destination="pvu-nB-rB4" id="oJ8-WN-oF7"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="buttonRecycleBin" destination="7W5-Xm-QCw" id="wQp-sA-GDQ"/>
                         <outletCollection property="buttonPlus" destination="l6m-lh-xDr" collectionClass="NSMutableArray" id="Khu-HF-0ON"/>
                     </connections>
                 </tableViewController>
