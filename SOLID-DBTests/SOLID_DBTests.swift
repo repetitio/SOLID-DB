@@ -50,7 +50,6 @@ class SOLID_DBTests: XCTestCase {
     }
 
     func testMemoryDatabase() throws {
-
         let databaseMemory = DatabaseCreator.databaseCRUD(launchDatabaseParameter: .memory)
         databaseMemory.removeAll()
         XCTAssert(databaseMemory.count() == 0)
@@ -62,10 +61,12 @@ class SOLID_DBTests: XCTestCase {
         XCTAssert(databaseMemory.count() == 3)
         databaseMemory.removeAll()
         XCTAssert(databaseMemory.count() == 0)
+        databaseMemory.create(dataViewModel: dataViewModel)
+        databaseMemory.remove(dataViewModel: dataViewModel)
+        XCTAssert(databaseMemory.count() == 0)
     }
 
     func testUserDefaultDatabase() throws {
-
         let databaseMemory = DatabaseCreator.databaseCRUD(launchDatabaseParameter: .userDefault)
         databaseMemory.removeAll()
         XCTAssert(databaseMemory.count() == 0)
@@ -76,6 +77,9 @@ class SOLID_DBTests: XCTestCase {
         databaseMemory.create(dataViewModel: dataViewModel)
         XCTAssert(databaseMemory.count() == 3)
         databaseMemory.removeAll()
+        XCTAssert(databaseMemory.count() == 0)
+        databaseMemory.create(dataViewModel: dataViewModel)
+        databaseMemory.remove(dataViewModel: dataViewModel)
         XCTAssert(databaseMemory.count() == 0)
     }
 
