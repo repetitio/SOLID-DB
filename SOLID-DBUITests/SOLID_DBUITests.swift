@@ -47,6 +47,16 @@ class SOLID_DBUITests: XCTestCase {
         XCTAssert(app.buttons["idSelectorButtonUserDefault"].isEnabled)
         XCTAssert(app.buttons["idSelectorButtonRealm"].isEnabled)
         XCTAssert(app.buttons["idSelectorButtonCoreData"].isEnabled)
+
+        app.buttons["idSelectorButtonMemory"].tap()
+        app.navigationBars.buttons.element(boundBy: 0).tap()
+        app.buttons["idSelectorButtonUserDefault"].tap()
+        app.navigationBars.buttons.element(boundBy: 0).tap()
+//        app.buttons["idSelectorButtonRealm"].tap()
+//        app.navigationBars.buttons.element(boundBy: 0).tap()
+//        app.buttons["idSelectorButtonCoreData"].tap()
+//        app.navigationBars.buttons.element(boundBy: 0).tap()
+
     }
 
     func testLaunchNoneDatabases() throws {
@@ -63,6 +73,53 @@ class SOLID_DBUITests: XCTestCase {
         XCTAssert(!app.buttons["idSelectorButtonRealm"].isEnabled)
         XCTAssert(!app.buttons["idSelectorButtonCoreData"].isEnabled)
     }
+
+        func testMemoryDatabases() throws {
+            let app = XCUIApplication()
+            app.launchArguments.append("-memory")
+            app.launch()
+            XCTAssert( app.launchArguments.contains("-memory"))
+            app.buttons["idSelectorButtonMemory"].tap()
+
+            XCTAssert( app.navigationBars.buttons["Add"].exists)
+            XCTAssert( app.navigationBars.buttons["Delete"].exists)
+            XCTAssert( app.navigationBars.buttons["Back"].exists)
+
+            for count in 4...5 {
+                for _ in 1...count {
+                    app.navigationBars.buttons["Add"].tap()
+                }
+                app.navigationBars.buttons["Delete"].tap()
+            }
+            app.navigationBars.buttons.element(boundBy: 0).tap()
+            XCTAssert( !app.navigationBars.buttons["Add"].exists)
+            XCTAssert( !app.navigationBars.buttons["Delete"].exists)
+            XCTAssert( !app.navigationBars.buttons["Back"].exists)
+        }
+
+        func testUserDefaultDatabases() throws {
+            let app = XCUIApplication()
+            app.launchArguments.append("-userDefault")
+            app.launch()
+            XCTAssert( app.launchArguments.contains("-userDefault"))
+            app.buttons["idSelectorButtonUserDefault"].tap()
+
+            XCTAssert( app.navigationBars.buttons["Add"].exists)
+            XCTAssert( app.navigationBars.buttons["Delete"].exists)
+            XCTAssert( app.navigationBars.buttons["Back"].exists)
+
+            for count in 4...5 {
+                for _ in 1...count {
+                    app.navigationBars.buttons["Add"].tap()
+                }
+                app.navigationBars.buttons["Delete"].tap()
+            }
+            sleep(1)
+            app.navigationBars.buttons.element(boundBy: 0).tap()
+            XCTAssert( !app.navigationBars.buttons["Add"].exists)
+            XCTAssert( !app.navigationBars.buttons["Delete"].exists)
+            XCTAssert( !app.navigationBars.buttons["Back"].exists)
+        }
 
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
