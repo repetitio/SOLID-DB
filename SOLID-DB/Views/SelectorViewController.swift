@@ -23,6 +23,7 @@ class SelectorViewController: UIViewController {
     }
 
     private func configureUI(_ launchDatabasesStructure: LaunchDatabasesStructure) {
+        title = "Select Database"
         buttonGoToMemoryDatabase    .isEnabled = launchDatabasesStructure.memory
         buttonGoToDefaultDatabase   .isEnabled = launchDatabasesStructure.userDefault
         buttonGoToRealmDatabase     .isEnabled = launchDatabasesStructure.realm

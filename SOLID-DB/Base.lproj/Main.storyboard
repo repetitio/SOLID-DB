@@ -54,7 +54,7 @@
                                     <action selector="onButtonPlus:" destination="pvu-nB-rB4" id="a8w-ex-LnB"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem systemItem="trash" id="7W5-Xm-QCw">
+                            <barButtonItem systemItem="trash" id="7W5-Xm-QCw" userLabel="Button Recycle">
                                 <connections>
                                     <action selector="onButtonRecycleBin:" destination="pvu-nB-rB4" id="oJ8-WN-oF7"/>
                                 </connections>
