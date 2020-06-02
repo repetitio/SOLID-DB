@@ -9,5 +9,8 @@ The App is going to work with some kinds of databases:
 - Core Data
 
 Working Futures:
-- Launch parameters initialization: <"-memory", "-userDefaults", "-realm", "-coreData">
+- Launch with parameters: <"-memory", "-userDefaults", "-realm", "-coreData">
 - Lint guard
+- Memory database & tests
+- User Defaults database & tests
+
