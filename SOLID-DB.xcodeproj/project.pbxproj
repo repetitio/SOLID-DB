@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		841D21EF249F5C250068AAA5 /* DatabaseRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D21EE249F5C250068AAA5 /* DatabaseRealm.swift */; };
+		841D21F0249F5C250068AAA5 /* DatabaseRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D21EE249F5C250068AAA5 /* DatabaseRealm.swift */; };
+		841D21F1249F5C250068AAA5 /* DatabaseRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D21EE249F5C250068AAA5 /* DatabaseRealm.swift */; };
 		844B99182480865700FDAD24 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B99172480865700FDAD24 /* TableViewController.swift */; };
 		844B99192480865700FDAD24 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B99172480865700FDAD24 /* TableViewController.swift */; };
 		844B991A2480865700FDAD24 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B99172480865700FDAD24 /* TableViewController.swift */; };
@@ -68,6 +71,7 @@
 		3B02DCAD8EA1F65EBE13263A /* Pods-SOLID-DB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOLID-DB.release.xcconfig"; path = "Target Support Files/Pods-SOLID-DB/Pods-SOLID-DB.release.xcconfig"; sourceTree = "<group>"; };
 		5559B77366766A64ED9FFC65 /* Pods-SOLID-DBTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOLID-DBTests.release.xcconfig"; path = "Target Support Files/Pods-SOLID-DBTests/Pods-SOLID-DBTests.release.xcconfig"; sourceTree = "<group>"; };
 		57DC2175B17BA169DF0A9769 /* Pods-SOLID-DBTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOLID-DBTests.debug.xcconfig"; path = "Target Support Files/Pods-SOLID-DBTests/Pods-SOLID-DBTests.debug.xcconfig"; sourceTree = "<group>"; };
+		841D21EE249F5C250068AAA5 /* DatabaseRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseRealm.swift; sourceTree = "<group>"; };
 		844B99172480865700FDAD24 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		8452C5D8247673070053B5FA /* SOLID-DB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SOLID-DB.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8452C5DB247673070053B5FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +89,8 @@
 		8452C613247691510053B5FA /* SelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorViewController.swift; sourceTree = "<group>"; };
 		8452C6172476AB140053B5FA /* DatabaseServiceCRUDProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseServiceCRUDProtocol.swift; sourceTree = "<group>"; };
 		8452C61B2476AB680053B5FA /* DatabaseCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseCreator.swift; sourceTree = "<group>"; };
+		8453605B2486FA91006DE010 /* TestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestPlan.xctestplan; sourceTree = "<group>"; };
+		8453605C2486FAAC006DE010 /* TestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestPlan.xctestplan; sourceTree = "<group>"; };
 		8479F91824813EC600895C5D /* DatabaseUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseUserDefaults.swift; sourceTree = "<group>"; };
 		847AB06224803CB3008BC76E /* DatabaseMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseMemory.swift; sourceTree = "<group>"; };
 		84984665247BE8F3004B0999 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -179,6 +185,7 @@
 		8452C5F12476730A0053B5FA /* SOLID-DBTests */ = {
 			isa = PBXGroup;
 			children = (
+				8453605B2486FA91006DE010 /* TestPlan.xctestplan */,
 				8452C5F22476730A0053B5FA /* SOLID_DBTests.swift */,
 				8452C5F42476730A0053B5FA /* Info.plist */,
 			);
@@ -188,6 +195,7 @@
 		8452C5FC2476730A0053B5FA /* SOLID-DBUITests */ = {
 			isa = PBXGroup;
 			children = (
+				8453605C2486FAAC006DE010 /* TestPlan.xctestplan */,
 				8452C5FD2476730A0053B5FA /* SOLID_DBUITests.swift */,
 				8452C5FF2476730A0053B5FA /* Info.plist */,
 			);
@@ -199,6 +207,7 @@
 			children = (
 				847AB06224803CB3008BC76E /* DatabaseMemory.swift */,
 				8479F91824813EC600895C5D /* DatabaseUserDefaults.swift */,
+				841D21EE249F5C250068AAA5 /* DatabaseRealm.swift */,
 			);
 			path = "CRUD Databases";
 			sourceTree = "<group>";
@@ -247,6 +256,7 @@
 				8452C5D5247673070053B5FA /* Frameworks */,
 				8452C5D6247673070053B5FA /* Resources */,
 				84CB906A247BF2A10052174E /* ShellScript */,
+				A5EAC46950BBF0BFF43B4A88 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -266,6 +276,7 @@
 				8452C5EB2476730A0053B5FA /* Frameworks */,
 				8452C5EC2476730A0053B5FA /* Resources */,
 				84CB906B247BF3E00052174E /* ShellScript */,
+				830CCECA4134BDF7E178E3D5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -286,6 +297,7 @@
 				8452C5F62476730A0053B5FA /* Frameworks */,
 				8452C5F72476730A0053B5FA /* Resources */,
 				84CB906C247BF3F30052174E /* ShellScript */,
+				C5DFA2E414A4ACF86634F404 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -390,6 +402,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		830CCECA4134BDF7E178E3D5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SOLID-DBTests/Pods-SOLID-DBTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SOLID-DBTests/Pods-SOLID-DBTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SOLID-DBTests/Pods-SOLID-DBTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		84CB906A247BF2A10052174E /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -463,6 +492,40 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A5EAC46950BBF0BFF43B4A88 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SOLID-DB/Pods-SOLID-DB-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SOLID-DB/Pods-SOLID-DB-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SOLID-DB/Pods-SOLID-DB-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5DFA2E414A4ACF86634F404 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SOLID-DB-SOLID-DBUITests/Pods-SOLID-DB-SOLID-DBUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SOLID-DB-SOLID-DBUITests/Pods-SOLID-DB-SOLID-DBUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SOLID-DB-SOLID-DBUITests/Pods-SOLID-DB-SOLID-DBUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F7F5962DF28796934EF01C60 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -500,6 +563,7 @@
 				84EF4C0924802EEB004AE181 /* DataViewModel.swift in Sources */,
 				8452C6102476899B0053B5FA /* NavigationController.swift in Sources */,
 				849EE244247AF60E00FF9B8B /* LaunchDatabasesStructure.swift in Sources */,
+				841D21EF249F5C250068AAA5 /* DatabaseRealm.swift in Sources */,
 				844B99182480865700FDAD24 /* TableViewController.swift in Sources */,
 				8452C6182476AB140053B5FA /* DatabaseServiceCRUDProtocol.swift in Sources */,
 			);
@@ -517,6 +581,7 @@
 				84EF4C0A24802EEB004AE181 /* DataViewModel.swift in Sources */,
 				8452C6112476899B0053B5FA /* NavigationController.swift in Sources */,
 				849EE245247AF60E00FF9B8B /* LaunchDatabasesStructure.swift in Sources */,
+				841D21F0249F5C250068AAA5 /* DatabaseRealm.swift in Sources */,
 				844B99192480865700FDAD24 /* TableViewController.swift in Sources */,
 				8452C6192476AB140053B5FA /* DatabaseServiceCRUDProtocol.swift in Sources */,
 			);
@@ -534,6 +599,7 @@
 				84EF4C0B24802EEB004AE181 /* DataViewModel.swift in Sources */,
 				8452C6122476899B0053B5FA /* NavigationController.swift in Sources */,
 				849EE246247AF60E00FF9B8B /* LaunchDatabasesStructure.swift in Sources */,
+				841D21F1249F5C250068AAA5 /* DatabaseRealm.swift in Sources */,
 				844B991A2480865700FDAD24 /* TableViewController.swift in Sources */,
 				8452C61A2476AB140053B5FA /* DatabaseServiceCRUDProtocol.swift in Sources */,
 			);
@@ -730,7 +796,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 57DC2175B17BA169DF0A9769 /* Pods-SOLID-DBTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "SOLID-DBTests/Info.plist";
@@ -752,7 +818,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5559B77366766A64ED9FFC65 /* Pods-SOLID-DBTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "SOLID-DBTests/Info.plist";
@@ -774,7 +840,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 377DFDF80B040159173D8A14 /* Pods-SOLID-DB-SOLID-DBUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "SOLID-DBUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -794,7 +860,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EAC5561C2C3BFF7D7693C768 /* Pods-SOLID-DB-SOLID-DBUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "SOLID-DBUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (

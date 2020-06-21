@@ -18,7 +18,7 @@ class DatabaseCreator {
         case .userDefault:
             return DatabaseUserDefaults()
         case .realm:
-            fatalError("not implemented")
+            return DatabaseRealm()
         case .coreData:
             fatalError("not implemented")
         }

@@ -38,6 +38,11 @@ struct DataViewModel {
     init(dataUserDefaultModel: DataUserDefaultModel) {
         self.init(text: dataUserDefaultModel.text, uuid: dataUserDefaultModel.uuid, date: dataUserDefaultModel.date)
     }
+
+    init(dataRealmModel: DataRealmModel) {
+        self.init(text: dataRealmModel.text, uuid: UUID(uuidString: dataRealmModel.uuid) ?? UUID(), date: dataRealmModel.date)
+    }
+
 }
 
 struct DataMemoryModel {
