@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "36D8A005-BF10-42F5-8DD2-CD1DCE676A12",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:SOLID-DB.xcodeproj",
+        "identifier" : "8452C5F82476730A0053B5FA",
+        "name" : "SOLID-DBUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
