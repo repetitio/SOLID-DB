@@ -13,6 +13,7 @@ target 'SOLID-DB' do
 
   target 'SOLID-DBUITests' do
       inherit! :search_paths
+      pod 'RealmSwift'
   end
 
 end

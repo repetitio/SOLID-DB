@@ -13,4 +13,3 @@ Working Futures:
 - Lint guard
 - Memory database & tests
 - User Defaults database & tests
-

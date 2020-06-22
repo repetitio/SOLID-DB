@@ -16,6 +16,9 @@ class SOLID_DBUITests: XCTestCase {
         app.launchArguments.append("-realm")
         app.launchArguments.append("-coreData")
         app.launchArguments.append("-TESTS_UI")
+
+
+
     }
 
     override func setUpWithError() throws {
@@ -155,6 +158,45 @@ class SOLID_DBUITests: XCTestCase {
 
         app.navigationBars.buttons.element(boundBy: 0).tap()
     }
+
+    func testRealmDatabases() throws {
+        let app = XCUIApplication()
+        app.launchArguments.append("-realm")
+        app.launch()
+        XCTAssert( app.launchArguments.contains("-realm"))
+        app.buttons["idSelectorButtonRealm"].tap()
+
+        XCTAssert( app.navigationBars.buttons["Add"].exists)
+        XCTAssert( app.navigationBars.buttons["Delete"].exists)
+        XCTAssert( app.navigationBars.buttons["Back"].exists)
+
+        for count in 4...5 {
+            for _ in 1...count {
+                app.navigationBars.buttons["Add"].tap()
+            }
+            app.navigationBars.buttons["Delete"].tap()
+        }
+        app.navigationBars.buttons.element(boundBy: 0).tap()
+        XCTAssert( !app.navigationBars.buttons["Add"].exists)
+        XCTAssert( !app.navigationBars.buttons["Delete"].exists)
+        XCTAssert( !app.navigationBars.buttons["Back"].exists)
+               // swipe delete
+               app.buttons["idSelectorButtonRealm"].tap()
+
+               app.navigationBars.buttons["Add"].tap()
+               app.navigationBars.buttons["Add"].tap()
+               app.navigationBars.buttons["Add"].tap()
+
+               let tablesQuery: XCUIElementQuery = app.tables
+               tablesQuery.cells.firstMatch.swipeLeft()
+               tablesQuery.buttons["Delete"].tap()
+               tablesQuery.cells.firstMatch.swipeLeft()
+               tablesQuery.buttons["Delete"].tap()
+               tablesQuery.cells.firstMatch.swipeLeft()
+               tablesQuery.buttons["Delete"].tap()
+
+               app.navigationBars.buttons.element(boundBy: 0).tap()
+            }
 
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
