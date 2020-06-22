@@ -14,6 +14,10 @@ class DataRealmModel: Object {
     @objc dynamic var uuid: String
     @objc dynamic var date: Date
 
+    override static func primaryKey() -> String? {
+      return "uuid"
+    }
+
     required init() {
         self.text = ""
         self.uuid = UUID().uuidString
@@ -42,6 +46,12 @@ class DatabaseRealm: DatabaseServiceCRUDProtocol {
 
     init() {
         do {
+            guard let configFile = Realm.Configuration.defaultConfiguration.fileURL else {
+                fatalError()
+            }
+            let config = Realm.Configuration(schemaVersion: try schemaVersionAtURL(configFile) + 1)
+            Realm.Configuration.defaultConfiguration = config
+
             self.realm = try Realm()
         } catch {
             fatalError(error.localizedDescription)
@@ -49,37 +59,45 @@ class DatabaseRealm: DatabaseServiceCRUDProtocol {
     }
 
     func create(dataViewModel: DataViewModel) {
-        let dataRealmModel = DataRealmModel(dataViewModel: dataViewModel)
-        do {
-            try realm.write {
-                realm.add(dataRealmModel)
-                delegate?.refresh()
+        autoreleasepool {
+            let dataRealmModel = DataRealmModel(dataViewModel: dataViewModel)
+            do {
+                try realm.write {
+                    realm.add(dataRealmModel)
+                    delegate?.refresh()
+                }
+            } catch {
+                print(error.localizedDescription)
             }
-        } catch {
-            print(error.localizedDescription)
         }
     }
 
     func remove(dataViewModel: DataViewModel) {
-        let dataRealmModel = DataRealmModel(dataViewModel: dataViewModel)
-        do {
-            try realm.write {
-                realm.delete(dataRealmModel)
-                delegate?.refresh()
+        autoreleasepool {
+            let dataRealmModel = DataRealmModel(dataViewModel: dataViewModel)
+            do {
+                try realm.write {
+                    if let object = realm.object(ofType: DataRealmModel.self, forPrimaryKey: dataRealmModel.uuid) {
+                        realm.delete(object)
+                        delegate?.refresh()
+                    }
+                }
+            } catch {
+                print(error.localizedDescription)
             }
-        } catch {
-            print(error.localizedDescription)
         }
     }
 
     func removeAll() {
-        do {
-            try realm.write {
-                realm.delete(realm.objects(DataRealmModel.self))
-                delegate?.refresh()
+        autoreleasepool {
+            do {
+                try realm.write {
+                    realm.delete(realm.objects(DataRealmModel.self))
+                    delegate?.refresh()
+                }
+            } catch {
+                print(error.localizedDescription)
             }
-        } catch {
-            print(error.localizedDescription)
         }
     }
 
@@ -101,7 +119,7 @@ class DatabaseRealm: DatabaseServiceCRUDProtocol {
     }
 
     func title() -> String {
-        return "User Defaults Database"
+        return "Realm Database"
     }
 
 }
