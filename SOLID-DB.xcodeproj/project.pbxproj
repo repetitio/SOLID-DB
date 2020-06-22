@@ -280,6 +280,7 @@
 				8452C5F62476730A0053B5FA /* Frameworks */,
 				8452C5F72476730A0053B5FA /* Resources */,
 				84CB906C247BF3F30052174E /* ShellScript */,
+				3F2CE2C8A1DA07949197B9F4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -362,6 +363,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3F2CE2C8A1DA07949197B9F4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SOLID-DBUITests/Pods-SOLID-DBUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SOLID-DBUITests/Pods-SOLID-DBUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SOLID-DBUITests/Pods-SOLID-DBUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		723B91EC9E63AFFFB1488EBB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

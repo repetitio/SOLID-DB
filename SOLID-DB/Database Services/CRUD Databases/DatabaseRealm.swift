@@ -15,7 +15,7 @@ class DataRealmModel: Object {
     @objc dynamic var date: Date
 
     override static func primaryKey() -> String? {
-      return "uuid"
+        return "uuid"
     }
 
     required init() {
@@ -46,12 +46,15 @@ class DatabaseRealm: DatabaseServiceCRUDProtocol {
 
     init() {
         do {
-            guard let configFile = Realm.Configuration.defaultConfiguration.fileURL else {
-                fatalError()
+            if let configFile = Realm.Configuration.defaultConfiguration.fileURL {
+                let config = Realm.Configuration(schemaVersion: try schemaVersionAtURL(configFile) + 1)
+                Realm.Configuration.defaultConfiguration = config
             }
-            let config = Realm.Configuration(schemaVersion: try schemaVersionAtURL(configFile) + 1)
-            Realm.Configuration.defaultConfiguration = config
+        } catch {
+            print(error.localizedDescription)
+        }
 
+        do {
             self.realm = try Realm()
         } catch {
             fatalError(error.localizedDescription)
