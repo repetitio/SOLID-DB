@@ -8,11 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		841D21EF249F5C250068AAA5 /* DatabaseRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D21EE249F5C250068AAA5 /* DatabaseRealm.swift */; };
-		841D21F0249F5C250068AAA5 /* DatabaseRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D21EE249F5C250068AAA5 /* DatabaseRealm.swift */; };
-		841D21F1249F5C250068AAA5 /* DatabaseRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D21EE249F5C250068AAA5 /* DatabaseRealm.swift */; };
 		844B99182480865700FDAD24 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B99172480865700FDAD24 /* TableViewController.swift */; };
-		844B99192480865700FDAD24 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B99172480865700FDAD24 /* TableViewController.swift */; };
-		844B991A2480865700FDAD24 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B99172480865700FDAD24 /* TableViewController.swift */; };
 		8452C5DC247673070053B5FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452C5DB247673070053B5FA /* AppDelegate.swift */; };
 		8452C5E3247673070053B5FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8452C5E1247673070053B5FA /* Main.storyboard */; };
 		8452C5E5247673090053B5FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8452C5E4247673090053B5FA /* Assets.xcassets */; };
@@ -20,31 +16,15 @@
 		8452C5F32476730A0053B5FA /* SOLID_DBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452C5F22476730A0053B5FA /* SOLID_DBTests.swift */; };
 		8452C5FE2476730A0053B5FA /* SOLID_DBUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452C5FD2476730A0053B5FA /* SOLID_DBUITests.swift */; };
 		8452C6102476899B0053B5FA /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452C60F2476899B0053B5FA /* NavigationController.swift */; };
-		8452C6112476899B0053B5FA /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452C60F2476899B0053B5FA /* NavigationController.swift */; };
-		8452C6122476899B0053B5FA /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452C60F2476899B0053B5FA /* NavigationController.swift */; };
 		8452C614247691510053B5FA /* SelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452C613247691510053B5FA /* SelectorViewController.swift */; };
-		8452C615247691510053B5FA /* SelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452C613247691510053B5FA /* SelectorViewController.swift */; };
-		8452C616247691510053B5FA /* SelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452C613247691510053B5FA /* SelectorViewController.swift */; };
 		8452C6182476AB140053B5FA /* DatabaseServiceCRUDProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452C6172476AB140053B5FA /* DatabaseServiceCRUDProtocol.swift */; };
-		8452C6192476AB140053B5FA /* DatabaseServiceCRUDProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452C6172476AB140053B5FA /* DatabaseServiceCRUDProtocol.swift */; };
-		8452C61A2476AB140053B5FA /* DatabaseServiceCRUDProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452C6172476AB140053B5FA /* DatabaseServiceCRUDProtocol.swift */; };
 		8452C61C2476AB680053B5FA /* DatabaseCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452C61B2476AB680053B5FA /* DatabaseCreator.swift */; };
-		8452C61D2476AB680053B5FA /* DatabaseCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452C61B2476AB680053B5FA /* DatabaseCreator.swift */; };
-		8452C61E2476AB680053B5FA /* DatabaseCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452C61B2476AB680053B5FA /* DatabaseCreator.swift */; };
 		8479F91924813EC600895C5D /* DatabaseUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479F91824813EC600895C5D /* DatabaseUserDefaults.swift */; };
-		8479F91A24813EC600895C5D /* DatabaseUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479F91824813EC600895C5D /* DatabaseUserDefaults.swift */; };
-		8479F91B24813EC600895C5D /* DatabaseUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479F91824813EC600895C5D /* DatabaseUserDefaults.swift */; };
 		847AB06324803CB3008BC76E /* DatabaseMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847AB06224803CB3008BC76E /* DatabaseMemory.swift */; };
-		847AB06424803CB3008BC76E /* DatabaseMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847AB06224803CB3008BC76E /* DatabaseMemory.swift */; };
-		847AB06524803CB3008BC76E /* DatabaseMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847AB06224803CB3008BC76E /* DatabaseMemory.swift */; };
 		849EE244247AF60E00FF9B8B /* LaunchDatabasesStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849EE243247AF60E00FF9B8B /* LaunchDatabasesStructure.swift */; };
-		849EE245247AF60E00FF9B8B /* LaunchDatabasesStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849EE243247AF60E00FF9B8B /* LaunchDatabasesStructure.swift */; };
-		849EE246247AF60E00FF9B8B /* LaunchDatabasesStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849EE243247AF60E00FF9B8B /* LaunchDatabasesStructure.swift */; };
 		84EF4C0924802EEB004AE181 /* DataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EF4C0824802EEB004AE181 /* DataViewModel.swift */; };
-		84EF4C0A24802EEB004AE181 /* DataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EF4C0824802EEB004AE181 /* DataViewModel.swift */; };
-		84EF4C0B24802EEB004AE181 /* DataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EF4C0824802EEB004AE181 /* DataViewModel.swift */; };
-		946DF0F28ACBC3DAB6A11E22 /* Pods_SOLID_DB_SOLID_DBUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F49FCBBEACDDF925E207A5A /* Pods_SOLID_DB_SOLID_DBUITests.framework */; };
 		9747C5FA1F711923B83E8E63 /* Pods_SOLID_DBTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87A02E7A7688BFFB685C3D9F /* Pods_SOLID_DBTests.framework */; };
+		BD062FCA09F0B162B5117DDD /* Pods_SOLID_DBUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25876BB9AD014F2CB143A445 /* Pods_SOLID_DBUITests.framework */; };
 		C178047070DE7BF31669616A /* Pods_SOLID_DB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9967FA179AB97247EBE301E2 /* Pods_SOLID_DB.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,7 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0F49FCBBEACDDF925E207A5A /* Pods_SOLID_DB_SOLID_DBUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SOLID_DB_SOLID_DBUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		25876BB9AD014F2CB143A445 /* Pods_SOLID_DBUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SOLID_DBUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		377DFDF80B040159173D8A14 /* Pods-SOLID-DB-SOLID-DBUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOLID-DB-SOLID-DBUITests.debug.xcconfig"; path = "Target Support Files/Pods-SOLID-DB-SOLID-DBUITests/Pods-SOLID-DB-SOLID-DBUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3B02DCAD8EA1F65EBE13263A /* Pods-SOLID-DB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOLID-DB.release.xcconfig"; path = "Target Support Files/Pods-SOLID-DB/Pods-SOLID-DB.release.xcconfig"; sourceTree = "<group>"; };
 		5559B77366766A64ED9FFC65 /* Pods-SOLID-DBTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOLID-DBTests.release.xcconfig"; path = "Target Support Files/Pods-SOLID-DBTests/Pods-SOLID-DBTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -99,7 +79,9 @@
 		84EF4C0824802EEB004AE181 /* DataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewModel.swift; sourceTree = "<group>"; };
 		87A02E7A7688BFFB685C3D9F /* Pods_SOLID_DBTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SOLID_DBTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9967FA179AB97247EBE301E2 /* Pods_SOLID_DB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SOLID_DB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A53F514C5664CFAB6D737ACD /* Pods-SOLID-DBUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOLID-DBUITests.release.xcconfig"; path = "Target Support Files/Pods-SOLID-DBUITests/Pods-SOLID-DBUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CC1B0D27FFB24CF49A19F92D /* Pods-SOLID-DB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOLID-DB.debug.xcconfig"; path = "Target Support Files/Pods-SOLID-DB/Pods-SOLID-DB.debug.xcconfig"; sourceTree = "<group>"; };
+		DED2A5E0115DBCB089E0FBC8 /* Pods-SOLID-DBUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOLID-DBUITests.debug.xcconfig"; path = "Target Support Files/Pods-SOLID-DBUITests/Pods-SOLID-DBUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EAC5561C2C3BFF7D7693C768 /* Pods-SOLID-DB-SOLID-DBUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOLID-DB-SOLID-DBUITests.release.xcconfig"; path = "Target Support Files/Pods-SOLID-DB-SOLID-DBUITests/Pods-SOLID-DB-SOLID-DBUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,7 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				946DF0F28ACBC3DAB6A11E22 /* Pods_SOLID_DB_SOLID_DBUITests.framework in Frameworks */,
+				BD062FCA09F0B162B5117DDD /* Pods_SOLID_DBUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +122,8 @@
 				EAC5561C2C3BFF7D7693C768 /* Pods-SOLID-DB-SOLID-DBUITests.release.xcconfig */,
 				57DC2175B17BA169DF0A9769 /* Pods-SOLID-DBTests.debug.xcconfig */,
 				5559B77366766A64ED9FFC65 /* Pods-SOLID-DBTests.release.xcconfig */,
+				DED2A5E0115DBCB089E0FBC8 /* Pods-SOLID-DBUITests.debug.xcconfig */,
+				A53F514C5664CFAB6D737ACD /* Pods-SOLID-DBUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -238,8 +222,8 @@
 			isa = PBXGroup;
 			children = (
 				9967FA179AB97247EBE301E2 /* Pods_SOLID_DB.framework */,
-				0F49FCBBEACDDF925E207A5A /* Pods_SOLID_DB_SOLID_DBUITests.framework */,
 				87A02E7A7688BFFB685C3D9F /* Pods_SOLID_DBTests.framework */,
+				25876BB9AD014F2CB143A445 /* Pods_SOLID_DBUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -276,7 +260,6 @@
 				8452C5EB2476730A0053B5FA /* Frameworks */,
 				8452C5EC2476730A0053B5FA /* Resources */,
 				84CB906B247BF3E00052174E /* ShellScript */,
-				830CCECA4134BDF7E178E3D5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -297,7 +280,6 @@
 				8452C5F62476730A0053B5FA /* Frameworks */,
 				8452C5F72476730A0053B5FA /* Resources */,
 				84CB906C247BF3F30052174E /* ShellScript */,
-				C5DFA2E414A4ACF86634F404 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -395,28 +377,11 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SOLID-DB-SOLID-DBUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-SOLID-DBUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		830CCECA4134BDF7E178E3D5 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SOLID-DBTests/Pods-SOLID-DBTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SOLID-DBTests/Pods-SOLID-DBTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SOLID-DBTests/Pods-SOLID-DBTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		84CB906A247BF2A10052174E /* ShellScript */ = {
@@ -509,23 +474,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SOLID-DB/Pods-SOLID-DB-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C5DFA2E414A4ACF86634F404 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SOLID-DB-SOLID-DBUITests/Pods-SOLID-DB-SOLID-DBUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SOLID-DB-SOLID-DBUITests/Pods-SOLID-DB-SOLID-DBUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SOLID-DB-SOLID-DBUITests/Pods-SOLID-DB-SOLID-DBUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		F7F5962DF28796934EF01C60 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -573,17 +521,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8452C61D2476AB680053B5FA /* DatabaseCreator.swift in Sources */,
-				8479F91A24813EC600895C5D /* DatabaseUserDefaults.swift in Sources */,
-				8452C615247691510053B5FA /* SelectorViewController.swift in Sources */,
-				847AB06424803CB3008BC76E /* DatabaseMemory.swift in Sources */,
 				8452C5F32476730A0053B5FA /* SOLID_DBTests.swift in Sources */,
-				84EF4C0A24802EEB004AE181 /* DataViewModel.swift in Sources */,
-				8452C6112476899B0053B5FA /* NavigationController.swift in Sources */,
-				849EE245247AF60E00FF9B8B /* LaunchDatabasesStructure.swift in Sources */,
-				841D21F0249F5C250068AAA5 /* DatabaseRealm.swift in Sources */,
-				844B99192480865700FDAD24 /* TableViewController.swift in Sources */,
-				8452C6192476AB140053B5FA /* DatabaseServiceCRUDProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,17 +529,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8452C61E2476AB680053B5FA /* DatabaseCreator.swift in Sources */,
-				8479F91B24813EC600895C5D /* DatabaseUserDefaults.swift in Sources */,
-				8452C616247691510053B5FA /* SelectorViewController.swift in Sources */,
-				847AB06524803CB3008BC76E /* DatabaseMemory.swift in Sources */,
 				8452C5FE2476730A0053B5FA /* SOLID_DBUITests.swift in Sources */,
-				84EF4C0B24802EEB004AE181 /* DataViewModel.swift in Sources */,
-				8452C6122476899B0053B5FA /* NavigationController.swift in Sources */,
-				849EE246247AF60E00FF9B8B /* LaunchDatabasesStructure.swift in Sources */,
-				841D21F1249F5C250068AAA5 /* DatabaseRealm.swift in Sources */,
-				844B991A2480865700FDAD24 /* TableViewController.swift in Sources */,
-				8452C61A2476AB140053B5FA /* DatabaseServiceCRUDProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -796,7 +724,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 57DC2175B17BA169DF0A9769 /* Pods-SOLID-DBTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "SOLID-DBTests/Info.plist";
@@ -818,7 +746,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5559B77366766A64ED9FFC65 /* Pods-SOLID-DBTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "SOLID-DBTests/Info.plist";
@@ -838,7 +766,7 @@
 		};
 		8452C6092476730A0053B5FA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 377DFDF80B040159173D8A14 /* Pods-SOLID-DB-SOLID-DBUITests.debug.xcconfig */;
+			baseConfigurationReference = DED2A5E0115DBCB089E0FBC8 /* Pods-SOLID-DBUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
@@ -858,7 +786,7 @@
 		};
 		8452C60A2476730A0053B5FA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EAC5561C2C3BFF7D7693C768 /* Pods-SOLID-DB-SOLID-DBUITests.release.xcconfig */;
+			baseConfigurationReference = A53F514C5664CFAB6D737ACD /* Pods-SOLID-DBUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;

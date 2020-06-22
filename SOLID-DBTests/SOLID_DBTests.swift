@@ -7,6 +7,8 @@
 //
 
 import XCTest
+import RealmSwift
+
 @testable import SOLID_DB
 
 class SOLID_DBTests: XCTestCase {
@@ -47,13 +49,23 @@ class SOLID_DBTests: XCTestCase {
         XCTAssert(dataViewModelFromUserDefaultModel.text == text)
         XCTAssert(dataViewModelFromUserDefaultModel.uuid == uuid)
         XCTAssert(dataViewModelFromUserDefaultModel.date == date)
+
+        let dataRealmModel = DataRealmModel(text: text, uuid: uuid.uuidString, date: date)
+        XCTAssert(dataRealmModel.text == text)
+        XCTAssert(dataRealmModel.uuid == uuid.uuidString)
+        XCTAssert(dataRealmModel.date == date)
+
+        let dataViewModelFromRealmModel = DataViewModel(dataRealmModel: dataRealmModel)
+        XCTAssert(dataViewModelFromRealmModel.text == text)
+        XCTAssert(dataViewModelFromRealmModel.uuid == uuid)
+        XCTAssert(dataViewModelFromRealmModel.date == date)
     }
 
     func testMemoryDatabase() throws {
         let databaseMemory = DatabaseCreator.databaseCRUD(launchDatabaseParameter: .memory)
         databaseMemory.removeAll()
         XCTAssert(databaseMemory.count() == 0)
-        let text = "Some text"
+        let text = "Memory text"
         let dataViewModel = DataViewModel(text: text)
         databaseMemory.create(dataViewModel: dataViewModel)
         databaseMemory.create(dataViewModel: dataViewModel)
@@ -70,7 +82,7 @@ class SOLID_DBTests: XCTestCase {
         let databaseMemory = DatabaseCreator.databaseCRUD(launchDatabaseParameter: .userDefault)
         databaseMemory.removeAll()
         XCTAssert(databaseMemory.count() == 0)
-        let text = "Some text"
+        let text = "User Default text"
         let dataViewModel = DataViewModel(text: text)
         databaseMemory.create(dataViewModel: dataViewModel)
         databaseMemory.create(dataViewModel: dataViewModel)
@@ -81,6 +93,23 @@ class SOLID_DBTests: XCTestCase {
         databaseMemory.create(dataViewModel: dataViewModel)
         databaseMemory.remove(dataViewModel: dataViewModel)
         XCTAssert(databaseMemory.count() == 0)
+    }
+
+    func testRealmDatabase() throws {
+        let databaseRealm = DatabaseCreator.databaseCRUD(launchDatabaseParameter: .realm)
+        databaseRealm.removeAll()
+        XCTAssert(databaseRealm.count() == 0)
+        let text = "Realm text"
+        databaseRealm.create(dataViewModel: DataViewModel(text: text))
+        databaseRealm.create(dataViewModel: DataViewModel(text: text))
+        databaseRealm.create(dataViewModel: DataViewModel(text: text))
+        XCTAssert(databaseRealm.count() == 3)
+        databaseRealm.removeAll()
+        XCTAssert(databaseRealm.count() == 0)
+        let dataViewModel = DataViewModel(text: text)
+        databaseRealm.create(dataViewModel: dataViewModel)
+        databaseRealm.remove(dataViewModel: dataViewModel)
+        XCTAssert(databaseRealm.count() == 0)
     }
 
     func testPerformanceMemoryDatabase() throws {
@@ -124,6 +153,29 @@ class SOLID_DBTests: XCTestCase {
                 databaseMemory.remove(dataViewModel: dataViewModel)
             }
             XCTAssert(databaseMemory.count() == 0)
+        }
+    }
+
+    func testPerformanceRealmDatabase() throws {
+        self.measure {
+            let databaseRealm = DatabaseCreator.databaseCRUD(launchDatabaseParameter: .realm)
+            databaseRealm.removeAll()
+            XCTAssert(databaseRealm.count() == 0)
+
+            let maxN = 1000
+
+            for index in 1...maxN {
+                let text = "Realm Record:'\(index)'"
+                let dataViewModel = DataViewModel(text: text)
+                databaseRealm.create(dataViewModel: dataViewModel)
+            }
+            XCTAssert(databaseRealm.count() == maxN)
+
+            for _ in 1...maxN {
+                let dataViewModel: DataViewModel = databaseRealm.getElement(index: 0)
+                databaseRealm.remove(dataViewModel: dataViewModel)
+            }
+            XCTAssert(databaseRealm.count() == 0)
         }
     }
 

@@ -8,14 +8,11 @@ target 'SOLID-DB' do
   pod 'RealmSwift'
 
   target 'SOLID-DBTests' do
-    inherit! :search_paths
-  pod 'SwiftLint'
-  pod 'RealmSwift'
+      inherit! :search_paths
   end
 
   target 'SOLID-DBUITests' do
-  pod 'SwiftLint'
-  pod 'RealmSwift'
+      inherit! :search_paths
   end
 
 end
